@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "download-schema": "get-graphql-schema https://graphql.anilist.co > schema.graphql",
+    "download-schema": "npx get-graphql-schema https://dev.api.ontrak.dev/certificate/graph > schema.graphql",
+    "download-schema-with-header": "npx get-graphql-schema --header 'Authorization=Bearer MY_SECRET_TOKEN' https://dev.api.ontrak.dev/certificate/graph",
     "convert-schema": "graphql-codegen --config codegen.yml"
   },
   "keywords": [],
